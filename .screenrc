@@ -1,0 +1,22 @@
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n*%t%{-}%+w %= %c ${USER}@%H"
+
+term "screen-256color"
+termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+
+# default screen
+screen -t shell0 0
+screen -t shell1 1
+screen -t shell2 2
+screen -t shell3 3
+screen -t shell4 4
+screen -t shell5 5
+screen -t shell6 6 
+# screen -t nahodoom 7 ssh pudae@nahodoom-desktop
+# screen -t nahodoom 8 ssh pudae@nahodoom-desktop
+# screen -t nahodoom 9 ssh pudae@nahodoom-desktop
+
+bindkey -k k1 select 0
+bindkey -k k2 select 1
+bindkey -k k2 select 2
