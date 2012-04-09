@@ -25,6 +25,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " let g:SuperTabDefaultCompletionType="context"
 let g:clang_auto_select=1
 let g:clang_complete_auto=1
+let g:clang_complete_copen=0
 let g:clang_snippets=1
 let g:clang_snippets_engine="clang_complete"
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/local/include/boost,abs:/usr/include/c++'
