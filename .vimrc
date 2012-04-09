@@ -5,9 +5,13 @@ set ts=4
 set sw=4
 set nu
 
-set tags=./tags,./TAGS,tags,TAGS,/Users/pudae/src/nwm/tags,/opt/local/include/tags,/usr/include/tags
+set tags+=./tags
+set tags+=./TAGS
+set tags+=/Users/pudae/src/nwm/tags
+set tags+=/usr/local/include/boost/tags
+set tags+=/usr/include/c++/tags
 
-colorscheme molokai
+colorscheme bubblegum
 
 " Plugin 
 call pathogen#infect()
@@ -18,7 +22,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " End NERD tree configure
 
-let g:SuperTabDefaultCompletionType="context"
+" let g:SuperTabDefaultCompletionType="context"
+let g:clang_auto_select=1
+let g:clang_complete_auto=1
+let g:clang_snippets=1
+let g:clang_snippets_engine="clang_complete"
+let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,abs:/usr/local/include/boost,abs:/usr/include/c++'
 
 " Vundle 
 set nocompatible               " be iMproved
@@ -40,6 +49,7 @@ Bundle 'crooloose/nerdtree'
 " Bundle 'tpope/vim-repeat'
 " Bundle 'tpope/vim-fugitive'
 " Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Rip-Rip/clang_complete'
 " ...
 
 filetype plugin indent on     " required! 
