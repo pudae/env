@@ -1,0 +1,42 @@
+== vim setting ================================================================================
+
+1. Install pathogen.vim
+ - run this command
+	$ mkdir -p ~/.vim/autoload ~/.vim/bundle
+	$ curl -so ~/.vim/autoload/pathogen.vim \
+		https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+ - add this to .vimrc :
+	call pathogen#infect()
+	syntax on
+	filetype plugin indent on
+
+2. Install vundle.vim
+ - run this command
+	$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+ - add this to .vimrc :
+	set nocompatible
+	filetype off
+
+	set rtp+=~/.vim/bundle/vundle
+	call vundle#rc()
+
+	Bundle 'gmarik/vundle'
+
+3. Install clang_complete
+ - run this command
+	$ git clone https://github.com/Rip-Rip/clang_complete.git clang_complete_tmp
+	$ cd clang_complete_tmp
+	$ make install
+	$ rm -rf clang_complete_tmp
+ - add this to .vimrc :
+	let g:clang_auto_select=1
+	let g:clang_complete_auto = 1
+	let g:clang_snippets=1
+	let g:clang_snippets_engine='snipmate'
+	let g:clang_use_library=1
+	let g:clang_sort_algo='alpha'
+	let g:clang_complete_macros=1
+	let g:clang_complete_patterns=1
+ 
+3. Install additional plugin using bundle
+ - 
