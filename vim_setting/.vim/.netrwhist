@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/pudae/.vim/bundle/snipMate'
+let g:netrw_dirhist_2='/Users/pudae/.vim/plugin/clang'
+let g:netrw_dirhist_3='/Users/pudae/.vim'
+let g:netrw_dirhist_4='/Users/pudae'
