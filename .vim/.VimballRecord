@@ -1,1 +1,0 @@
-screen.vba: call delete('/Users/pudae/.vim/autoload/screen.vim')|call delete('/Users/pudae/.vim/doc/screen.txt')|call delete('/Users/pudae/.vim/plugin/screen.vim')
