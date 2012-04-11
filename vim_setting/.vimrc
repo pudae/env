@@ -34,7 +34,8 @@ let g:clang_auto_select=1
 let g:clang_complete_auto = 1
 let g:clang_snippets=1
 let g:clang_snippets_engine='snipmate'
-let g:clang_sort_algo='priority'
+let g:clang_sort_algo='auto'
+let g:clang_use_library=1
 
 let g:DoxygenToolkit_commentType='C++'
 
