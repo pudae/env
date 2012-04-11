@@ -1,4 +1,19 @@
+== install macvim =============================================================================
+- run this command
+	$ sudo port install macvim +ruby +cscope +python2.7 +perl
+- add this to ~/.profile or ~/.bash_profile
+	alias vim='mvim -v'
+
+
+
 == vim setting ================================================================================
+0. base .vimrc
+ 	syntax on
+
+	set smartindent
+	set ts=4
+	set sw=4
+	set nu
 
 1. Install pathogen.vim
  - run this command
@@ -33,10 +48,41 @@
 	let g:clang_complete_auto = 1
 	let g:clang_snippets=1
 	let g:clang_snippets_engine='snipmate'
+	let g:clang_sort_algo='auto'
 	let g:clang_use_library=1
-	let g:clang_sort_algo='alpha'
-	let g:clang_complete_macros=1
-	let g:clang_complete_patterns=1
  
-3. Install additional plugin using bundle
- - 
+4. Install additional plugin using bundle
+ - add this to .vimrc and type :BundleInstall
+ 	Bundle 'snipMate'
+ 	Bundle 'DoxygenToolkit.vim'
+ 	Bundle 'The-NERD-Commenter'
+ 	Bundle 'The-NERD-tree'
+	Bundle 'taglist.vim'
+ 
+ - add this to .vimrc
+	autocmd vimenter * if !argc() | NERDTree | endif
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+	let g:DoxygenToolkit_commentType='C++'
+	nnoremap <F2> :TlistToggle<CR>
+	nnoremap <F3> :NERDTreeToggle<CR>
+
+5. Apply custom (by pudae) snipMate template
+ - run this command
+ 	$ curl -so ~/.vim/snippets/c.snippets \
+		https://raw.github.com/pudae/env/HEAD/vim_setting/.vim/snippets/c.snippets
+ 	$ curl -so ~/.vim/snippets/cpp.snippets \
+		https://raw.github.com/pudae/env/HEAD/vim_setting/.vim/snippets/cpp.snippets
+
+6. Install theme
+ - run this command
+ 	$ curl -so ~/.vim/colors/bubblegum.vim \
+		https://raw.github.com/pudae/env/HEAD/vim_setting/.vim/colors/bubblegum.vim
+ - add this to .vimrc
+ 		colors bubblegum
+
+7. Install google coding style
+ - run this command
+ 	$ mkdir -p ~/.vim/indent
+	$ curl -so ~/.vim/indent/cpp.vim \
+		http://www.vim.org/scripts/download_script.php?src_id=14772
+		
