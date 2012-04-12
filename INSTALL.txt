@@ -52,12 +52,13 @@
 	let g:clang_use_library=1
  
 4. Install additional plugin using bundle
- - add this to .vimrc and type :BundleInstall
- 	Bundle 'snipMate'
+ - add this to .vimrc 
  	Bundle 'DoxygenToolkit.vim'
  	Bundle 'The-NERD-Commenter'
  	Bundle 'The-NERD-tree'
 	Bundle 'taglist.vim'
+
+ - reopen vim and type :BundleInstall
  
  - add this to .vimrc
 	autocmd vimenter * if !argc() | NERDTree | endif
@@ -65,6 +66,9 @@
 	let g:DoxygenToolkit_commentType='C++'
 	nnoremap <F2> :TlistToggle<CR>
 	nnoremap <F3> :NERDTreeToggle<CR>
+
+4. Install snipmate
+ - https://github.com/msanders/snipmate.vim 참조
 
 5. Apply custom (by pudae) snipMate template
  - run this command
@@ -75,6 +79,7 @@
 
 6. Install theme
  - run this command
+ 	$ mkdir -p ~/.vim/colors
  	$ curl -so ~/.vim/colors/bubblegum.vim \
 		https://raw.github.com/pudae/env/HEAD/vim_setting/.vim/colors/bubblegum.vim
  - add this to .vimrc
