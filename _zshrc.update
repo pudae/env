@@ -17,3 +17,9 @@ prompt_end() {
 ######################################################################
 # set vi mode
 bindkey -v
+
+######################################################################
+# https://github.com/sindresorhus/pure
+fpath=( "$HOME/.zfunctions" $fpath )
+autoload -U promptinit; promptinit
+prompt pure

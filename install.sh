@@ -20,6 +20,16 @@ cd ..
 rm -rf fonts
 # iTerm2 users need to set both the Regular font and the Non-ASCII Font in "iTerm > Preferences > Profiles > Text" to use a patched font
 
+
+###################################################################################
+# install pure
+mkdir -p ~/.zsh_package/
+mkdir -p ~/.zfunctions/
+git clone https://github.com/sindresorhus/pure ~/.zsh_package/pure
+ln -s ~/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+ln -s ~/pure/async.zsh ~/.zfunctions/async
+
+
 cp ~/.zshrc ~/.zshrc.bak
 cat _zshrc.update >> ~/.zshrc
 
