@@ -22,12 +22,20 @@ rm -rf fonts
 
 
 ###################################################################################
+# tmux configuration
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+cp ~/.tmux.conf ~/.tmux.conf
+cp _tmux.conf ~/.tmux.conf
+
+
+###################################################################################
 # install pure
 mkdir -p ~/.zsh_package/
 mkdir -p ~/.zfunctions/
 git clone https://github.com/sindresorhus/pure ~/.zsh_package/pure
-ln -s ~/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
-ln -s ~/pure/async.zsh ~/.zfunctions/async
+ln -s ~/.zsh_package/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+ln -s ~/.zsh_package/pure/async.zsh ~/.zfunctions/async
 
 
 cp ~/.zshrc ~/.zshrc.bak
