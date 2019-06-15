@@ -34,6 +34,6 @@ function scp_wrap {
 
 ######################################################################
 # https://github.com/sindresorhus/pure
-fpath=( "$HOME/.zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt pure
+# fpath=( "$HOME/.zfunctions" $fpath )
+# autoload -U promptinit; promptinit
+# prompt pure

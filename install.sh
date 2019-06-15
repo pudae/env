@@ -22,6 +22,14 @@ rm -rf fonts
 
 
 ###################################################################################
+# tmux configuration
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+cp ~/.tmux.conf ~/.tmux.conf
+cp _tmux.conf ~/.tmux.conf
+
+
+###################################################################################
 # install pure
 mkdir -p ~/.zsh_package/
 mkdir -p ~/.zfunctions/
