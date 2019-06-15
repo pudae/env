@@ -26,8 +26,8 @@ rm -rf fonts
 mkdir -p ~/.zsh_package/
 mkdir -p ~/.zfunctions/
 git clone https://github.com/sindresorhus/pure ~/.zsh_package/pure
-ln -s ~/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
-ln -s ~/pure/async.zsh ~/.zfunctions/async
+ln -s ~/.zsh_package/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+ln -s ~/.zsh_package/pure/async.zsh ~/.zfunctions/async
 
 
 cp ~/.zshrc ~/.zshrc.bak
@@ -43,3 +43,15 @@ cp ~/.vimrc ~/.vimrc.bak
 cp _vimrc ~/.vimrc
 
 vim +PlugInstall +qall
+
+
+# for nvim
+# curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# 
+# cp ~/.config/nvim/init.vim ~/.config/nvim/init.vim.bak
+# cp _vimrc ~/.config/nvim/init.vim
+# 
+# vim +PlugInstall +qall
