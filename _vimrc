@@ -40,7 +40,7 @@ let g:airline_section_y = 'BN %{bufnr("%")}'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " pymode configuration
-"let g:pymode = 1
+" let g:pymode = 1
 " let g:pymode_python = 'python3'
 " let g:pymode_rope = 0
 " let g:pymode_trim_whitespaces = 1
@@ -55,5 +55,5 @@ let g:airline_section_y = 'BN %{bufnr("%")}'
 " let g:pymode_run_bind = '<leader>r'
 " let g:pymode_lint = 1
 " let g:pymode_lint_on_fly = 0
-" " let g:pymode_lint_ignore = "E501,W"
+" let g:pymode_lint_ignore = "E501,W"
 " let g:pymode_python = 'python3'
